@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div  class="header-titulo">Belgrano Inmuebles</div>
+        <nav>
+            <ul class="header-links">
+                <li><a href="departamentos.html" target="_blank">Departamentos</a></li>
+                <li><a href="casas.html" target="_blank">Casas</a></li>
+                <li><a href="habitaciones.html" target="_blank">Habitaciones</a></li>
+            </ul>
+        </nav>
+        <a href="https://instagram.com" target="_blank" class="header-btn"><button>Contacto</button></a>
+    </header>
+
+    <main class="main">
+
+        <div class="filtro-busqueda">
+            
+            <div action="GET" class="container-busqueda">
+                <h1>Encontrá tu hogar</h1>
+                <div class="campo-busqueda">
+                    <select name="tipo-propiedad" id="tipo-propiedad">
+                        <option value="" selected disabled>Seleccione un tipo</option>
+                        <option value="casa">Casa</option>
+                        <option value="departamento">Departamento</option>
+                        <option value="habitacion">Habitación</option>
+                    </select>
+                    <select class="busqueda" name="busqueda" id="busqueda" aria-placeholder="Seleccione una ubicación">
+                        <option value="" selected disabled>Seleccione una ubicación</option>
+                        <option value="Godoy Cruz">Godoy Cruz</option>
+                        <option value="Capital">Capital</option>
+                        <option value="Maipú">Maipú</option>
+                    </select>
+                    <a id="btn-buscar" onclick="respuesta();" class="container-a">
+                        <button id="btn-buscar" onchange="respuesta();">Buscar</button>
+                    </a>
+                </div>
+                <div id="resultados" class="filtro-rta" ></div>
+                
+            </div>
+        </div>
+
+        <div class="propiedades">
+            <div class="inmuebles">
+                <div class="img">
+                    <figure>
+                        <a href="departamentos.html"><center><img src="departamento.jpg" alt="remeras"></center></a>
+                    </figure>
+                    <div class="info">
+                        <a href="departamentos.html"><h2>DEPARTAMENTOS</h2></a>
+                        <a href="departamentos.html" class="inmueble-vermas">VER MÁS</a>
+                    </div>
+                </div>
+                <div class="img">
+                    <figure>
+                        <a href="casas.html"><center><img src="casas.jpg" alt="casas"></center></a>
+                    </figure>
+                    <div class="info">
+                        <a href="casas.html"><h2>CASAS</h2></a>
+                        <a href="casas.html" class="inmueble-vermas">VER MÁS</a>
+                    </div>
+                </div>
+                <div class="img">
+                    <figure>
+                        <a href="habitaciones.html"><center><img src="habitaciones.jpg" alt="habitaciones de hotel"></center></a>
+                    </figure>
+                    <div class="info">
+                        <a href="habitaciones.html"><h2>HABITACIONES</h2></a>
+                        <a href="habitaciones.html" class="inmueble-vermas">VER MÁS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nosotros-contacto">
+            <div class="container-nc">
+                <div class="nosotros">
+                    <h2>Nosotros</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto repudiandae incidunt necessitatibus dolorem ipsa. Atque suscipit exercitationem perspiciatis, beatae harum incidunt enim molestiae quis autem et tempore quos. Quas voluptatum, dolorem, nemo eligendi incidunt cumque unde ex omnis adipisci, similique iste ullam soluta quibusdam sit.</p>
+                </div>
+                <div>
+                    <form class="contacto" action="">
+                        <h2>Contactanos</h2>
+                        <div class="formulario" id="formulariojs">
+                            <input name="Nombre" required type="text" placeholder="Ingresa tu nombre" id="nombre">
+                            <input name="Email" type="email" required type="email" placeholder="Escribe tu Correo" id="email">
+                            <input type="date" id="fecha" required type="date">
+                            <textarea required type="text" name="Descripcion" id="sugerencia" cols="30" rows="10" placeholder="¡Escribenos tu sugerencia!"></textarea>
+                            <input type="submit" >
+                        </div>
+            
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="ubicacion">
+                <h2>Nuestra ubicación</h2>
+                <h5>Av. Santa Fé 1532</h5>
+            </div>
+            <div><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+        </div>
+    </footer>
+    
+    
+    <script src="js/busqueda.js"></script>
+    <script>
+        inputs= document.querySelectorAll('input');
+        
+        expresiones={
+            nombre: /^[a-zA-Z]{1,30}$/,
+            correo: /^[a-zA-Z0-9_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{1,30}$/
+        }
+
+        const validar = (e) => {
+            switch(e.target.id){
+                case "nombre":
+                    if (expresiones.nombre.test(e.target.value)){ 
+                        document.getElementById('nombre').classList.add('form_correcto');
+                        document.getElementById('nombre').classList.remove('form_error');
+                    } else {
+                        document.getElementById('nombre').classList.add('form_error');
+                        document.getElementById('nombre').classList.remove('form_correcto');
+                    }
+                    break;
+                case "correo":
+                    if (expresiones.correo.test(e.target.value)){
+                        document.getElementById('correo').classList.add('form_correcto');
+                        document.getElementById('correo').classList.remove('form_error');
+                    } else{
+                        document.getElementById('correo').classList.add('form_error');
+                        document.getElementById('correo').classList.remove('form_correcto');
+                    }
+                    break;
+
+            }
+
+        }
+        inputs.forEach((input) => {
+            input.addEventListener('keyup',validar);
+        });
+    </script>
+</body>
+</html>  

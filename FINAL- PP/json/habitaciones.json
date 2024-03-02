@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "titulo": "Hotel Cordon del Plata",
+      "imagen": "/habs/habi1.jpg",
+      "precio": 1200,
+      "ubicacion": "Capital",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 2,
+      "titulo": "Agua del Corral Hotel & Spa ",
+      "imagen": "/habs/habi2.jpg",
+      "precio": 1500,
+      "ubicacion": "Capital",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 3,
+      "titulo": "Terrazas de Rondeau",
+      "imagen": "/habs/habi3.jpg",
+      "precio": 2500,
+      "ubicacion": "Capital",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 4,
+      "titulo": "Hotel Aconcagua",
+      "imagen": "/habs/habi4.jpg",
+      "precio": 3500,
+      "ubicacion": "Godoy Cruz",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 5,
+      "titulo": "Agua del Corral Hotel & Spa",
+      "imagen": "/habs/habi2.jpg",
+      "precio": 1500,
+      "ubicacion": "Godoy Cruz",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 6,
+      "titulo": "Terrazas de Rondeau",
+      "imagen": "/habs/habi3.jpg",
+      "precio": 2500,
+      "ubicacion": "Godoy Cruz",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 7,
+      "titulo": "Hotel Aconcagua",
+      "imagen": "/habs/habi4.jpg",
+      "precio": 3500,
+      "ubicacion": "Maipú",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 8,
+      "titulo": "Agua del Corral Hotel & Spa",
+      "imagen": "/habs/habi2.jpg",
+      "precio": 1500,
+      "ubicacion": "Maipú",
+      "descripcion": "Hermosa habitacion"
+    },
+    {
+      "id": 9,
+      "titulo": "Terrazas de Rondeau",
+      "imagen": "/habs/habi3.jpg",
+      "precio": 2500,
+      "ubicacion": "Maipú",
+      "descripcion": "Hermosa habitacion"
+    }
+  ]
+  

@@ -1,0 +1,146 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+/* HEADER */
+
+.encabezado{
+  background-color: #111129;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+
+}
+.encabezado a{
+  text-decoration: none;
+  cursor: pointer;
+  width: auto;
+  transition: all 0.3;
+  color: #eceff1;
+}
+.encabezado a:hover{
+  transform: scale(1.1);
+  color: #B57EDC;
+}
+
+/* MAIN */
+main{
+    background-color: #f4f8fb;
+}
+.subtitulo{
+    text-align: center;
+    padding-top: 50px;
+}
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+img{
+    max-width: 600px;
+    height: auto;
+}
+.info .precio{
+    padding-left: 50px;
+    color: black;
+    font-size: large;
+    line-height: 1.5em;
+    text-align: justify;
+}
+.info .precio h2{
+    padding-bottom: 9px;
+    text-decoration: double;
+}
+.info .info2{
+    padding-top: 40px;
+    padding-left: 50px;
+}
+.info .info2 p{
+    padding-top: 10px;
+    text-align: left;
+    width: 90%;
+    font-size: large;
+    line-height: 1.5em;
+    text-align: justify;
+}
+/* FOOTER */
+
+.pie{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.pie .g{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding: 45px 0px;
+}
+.pie .g .box h2{
+    color:white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie .g .box p{
+    color:white;
+    margin-bottom: 10px;
+}
+.redes a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: black;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.redes a:hover{
+    color: darkslategrey;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .subtitulo {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .inmuebles {
+    grid-template-columns: 1fr;
+  }
+
+  .img {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .subtitulo {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .inmuebles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body {
+  background-color: lightblue;
+}
